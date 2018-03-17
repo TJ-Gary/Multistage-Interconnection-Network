@@ -1,6 +1,6 @@
-
+// Flit is the data, transmitting in the network 
 public class Flit {
-	
+	// A flit will record the routers that it pass by.  
 	private int firstStageRouter,
 	            secondStageRouter,
 	            thirdStageRouter;
@@ -16,7 +16,7 @@ public class Flit {
 		else if (stage == 1) secondStageRouter = router;
 		else if (stage == 2) thirdStageRouter = router;
 	}
-	
+	// setter and getter
 	public void setSource(int sourceCore) { source = sourceCore; }
 	
 	public void setDestination(int destCore) { destination = destCore; }
