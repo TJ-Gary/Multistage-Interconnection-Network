@@ -12,13 +12,15 @@ public class Router {
 	private int stage;
 	
 	public Router(int stage) {
-		capacity = 4;
+		//Each input has four buffers
+		capacity = 4; 
 		this.stage = stage;
 		occupancyIn = new int[8];
 		occupancyOut = new int[8];
 		bufferIn = new ArrayList<ArrayList<Flit>>();
-		bufferOut= new ArrayList<ArrayList<Flit>>();		
-		for (int i = 0; i < 8; i++)	{
+		bufferOut= new ArrayList<ArrayList<Flit>>();	
+		//Each router has eight input/output
+		for (int i = 0; i < 8; i++)	{ 
 			bufferIn.add(new ArrayList<Flit>());
 			bufferOut.add(new ArrayList<Flit>());
 			occupancyIn[i] = 0;
@@ -52,7 +54,7 @@ public class Router {
 	public boolean isInputFull(int inputPort){
 		return occupancyIn[inputPort] == capacity;
 	}
-	
+	// move flits from input to output 
 	public void switchInputToOutput(){
 		int outputPort;
 		Flit data;
