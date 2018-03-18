@@ -1,4 +1,4 @@
-# Multistage-interconnection-networks-MINs
+# Multistage-interconnection-network (MIN)
 
 A small 3-stage network program in Java.
 Capable of simulating the average network latency.
